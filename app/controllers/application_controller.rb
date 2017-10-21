@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
       @user = User.new(username: params[:username], password: params[:password])
       @user.save
       session[:user_id] = @user.id
-      redirect '/login'    
+      redirect '/login'
     end
 
   end
